@@ -23,7 +23,7 @@ export function SidebarLayout({ children }: { children: React.ReactNode }) {
         <SidebarProvider>
           <AppSidebar logoutAction={logoutAction} />
           <SidebarInset className="rounded-none shadow-none">
-            <main className="flex flex-1 flex-col p-4">{children}</main>
+            <main className="flex flex-1 flex-col">{children}</main>
           </SidebarInset>
         </SidebarProvider>
       </div>

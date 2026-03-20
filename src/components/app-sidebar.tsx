@@ -72,14 +72,13 @@ type NavItem = {
 
 // This is sample data.
 const data: {
-  user: { name: string; email: string; avatar: string }
+  user: { name: string; email: string; avatar?: string }
   teams: { name: string; logo: LucideIcon; plan: string }[]
   navMain: NavItem[]
 } = {
   user: {
     name: "lumong",
     email: "leelumong@gmail.com",
-    avatar: "/avatars/shadcn.jpg",
   },
   teams: [
     {
@@ -238,7 +237,7 @@ export function AppSidebar({ logoutAction }: { logoutAction: () => Promise<void>
                 >
                   <Avatar className="h-8 w-8 rounded-lg">
                     <AvatarImage src={data.user.avatar} alt={data.user.name} />
-                    <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                    <AvatarFallback className="rounded-lg">LM</AvatarFallback>
                   </Avatar>
                   <div className="grid flex-1 text-left text-sm leading-tight">
                     <span className="truncate font-semibold">{data.user.name}</span>
@@ -257,7 +256,7 @@ export function AppSidebar({ logoutAction }: { logoutAction: () => Promise<void>
                   <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                     <Avatar className="h-8 w-8 rounded-lg">
                       <AvatarImage src={data.user.avatar} alt={data.user.name} />
-                      <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                      <AvatarFallback className="rounded-lg">LM</AvatarFallback>
                     </Avatar>
                     <div className="grid flex-1 text-left text-sm leading-tight">
                       <span className="truncate font-semibold">{data.user.name}</span>
