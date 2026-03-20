@@ -640,7 +640,7 @@ export default function NaverBlogPage() {
                     handleGenerate()
                   }
                 }}
-                className="min-h-[120px] pl-14 pr-16 py-4 rounded-3xl text-base resize-none"
+                className="w-full min-h-[120px] pl-14 pr-16 py-4 rounded-3xl text-base resize-none"
                 disabled={loading}
                 rows={4}
               />
