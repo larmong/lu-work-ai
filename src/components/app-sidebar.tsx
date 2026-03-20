@@ -2,23 +2,12 @@
 
 import * as React from "react"
 import {
-  AudioWaveform,
-  BookOpen,
   Bot,
   ChevronRight,
-  Command,
-  Frame,
   GalleryVerticalEnd,
-  History,
-  Map,
-  MoreHorizontal,
-  PieChart,
-  Plus,
   Settings2,
   SquareTerminal,
-  Star,
   LogOut,
-  User2,
   LucideIcon,
 } from "lucide-react"
 
@@ -254,17 +243,3 @@ export function AppSidebar({ logoutAction }: { logoutAction: () => Promise<void>
     </Sidebar>
   )
 }
-
-function DropdownMenuShortcut({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLSpanElement>) {
-  return (
-    <span
-      className={cn("ml-auto text-xs tracking-widest opacity-60", className)}
-      {...props}
-    />
-  )
-}
-
-import { cn } from "@/lib/utils"

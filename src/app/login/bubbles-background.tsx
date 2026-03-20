@@ -21,9 +21,11 @@ export const BubblesBackground = () => {
         }
 
         .gradients-container {
-          filter: url(#goo) blur(40px);
+          filter: url(#goo) blur(24px);
           width: 100%;
           height: 100%;
+          transform: translateZ(0);
+          will-change: transform;
         }
 
         .g1, .g2, .g3, .g4, .g5 {
@@ -33,6 +35,7 @@ export const BubblesBackground = () => {
           top: 0;
           left: 0;
           mix-blend-mode: screen;
+          will-change: transform;
         }
 
         /* 부드러운 핑크 */
@@ -110,6 +113,23 @@ export const BubblesBackground = () => {
           0% { transform: translateX(-30%) translateY(-10%); }
           50% { transform: translateX(30%) translateY(10%); }
           100% { transform: translateX(-30%) translateY(-10%); }
+        }
+
+        @media (max-width: 1280px) {
+          .g4, .g5 {
+            display: none;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .gradients-container {
+            filter: blur(12px);
+          }
+
+          .g1, .g2, .g3, .g4, .g5 {
+            animation: none;
+            opacity: 0.25;
+          }
         }
       `}</style>
       

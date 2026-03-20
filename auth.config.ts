@@ -36,6 +36,16 @@ export const authConfig: NextAuthConfig = {
     signIn: "/login",
   },
   callbacks: {
+    authorized: ({ auth, request }) => {
+      const isLoggedIn = !!auth?.user
+      const isLoginPage = request.nextUrl.pathname === "/login"
+
+      if (isLoginPage) {
+        return true
+      }
+
+      return isLoggedIn
+    },
     jwt: ({ token, user }) => {
       if (user) {
         token.id = user.id
